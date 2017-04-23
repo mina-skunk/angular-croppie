@@ -1,28 +1,61 @@
-# AngularCroppie
+# angular-croppie
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
+Angular module for using [Croppie](https://foliotek.github.io/Croppie/).
 
-## Development server
+## Getting Started
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Based on @angular/cli project.
 
-## Code scaffolding
+```bash
+npm install --save @angular/material angular-croppie hammerjs croppie
+npm install --save-dev @types/hammerjs @types/croppie
+```
+*Note: angular-croppie not published yet.*
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive/pipe/service/class/module`.
+Add `"../node_modules/croppie/croppie.css"` to `.angular-cli.json`'s `"styles": [...]`.
 
-## Build
+## Directive (basic)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+```ts
+import { CroppieModule } from 'angular-croppie';
 
-## Running unit tests
+@NgModule({
+    imports: [
+        CroppieModule
+    ]
+})
+export class AppModule { }
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```html
+<img #croppie="croppie" [croppieOptions]="croppieOptions" />
+```
 
-## Running end-to-end tests
+```ts
+import { CroppieOptions } from 'croppie';
+import { CroppieDirective } from 'angular-croppie';
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
+@Component({
+    ...
+})
+export class AppComponent implements AfterViewInit {
 
-## Further help
+    public croppieOptions: CroppieOptions = {
+        // https://foliotek.github.io/Croppie/#documentation Options
+        ...options
+    };
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+    @ViewChild('croppie')
+    public croppieDirective: CroppieDirective;
+
+    public ngAfterViewInit() {
+        // https://foliotek.github.io/Croppie/#documentation Methods
+        this.croppieDirective.croppie...
+    }
+
+}
+```
+
+## Component (experimental)
+
+TODO
