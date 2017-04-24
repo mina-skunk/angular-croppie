@@ -1,6 +1,6 @@
 {
-    "name": "angular-croppie",
-    "main": "bundles/angular-croppie.umd.js",
+    "name": "angular-croppie-module",
+    "main": "bundles/angular-croppie-module.umd.js",
     "module": "index.js",
     "typings": "index.d.ts",
     "peerDependencies": {

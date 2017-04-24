@@ -1,6 +1,6 @@
-# angular-croppie
+# angular-croppie-module
 
-Angular module for using [Croppie](https://foliotek.github.io/Croppie/).
+Angular 2+ module for using [Croppie](https://foliotek.github.io/Croppie/).
 
 ## Getting Started
 
@@ -19,7 +19,7 @@ Add `"../node_modules/croppie/croppie.css"` to `.angular-cli.json`'s `"styles": 
 Basic directive for creating Coppie instance on `<img>` tag.
 
 ```ts
-import { CroppieModule } from 'angular-croppie';
+import { CroppieModule } from 'angular-croppie-module';
 
 @NgModule({
     imports: [
@@ -35,7 +35,7 @@ export class AppModule { }
 
 ```ts
 import { CroppieOptions } from 'croppie';
-import { CroppieDirective } from 'angular-croppie';
+import { CroppieDirective } from 'angular-croppie-module';
 
 @Component({
     ...
@@ -63,7 +63,7 @@ export class AppComponent implements AfterViewInit {
 Component containing Coppie instance and material design rotation buttons and slider.
 
 ```ts
-import { CroppieModule } from 'angular-croppie';
+import { CroppieModule } from 'angular-croppie-module';
 
 @NgModule({
     imports: [
@@ -79,7 +79,7 @@ export class AppModule { }
 
 ```ts
 import { CroppieOptions } from 'croppie';
-import { CroppieDirective } from 'angular-croppie';
+import { CroppieDirective } from 'angular-croppie-module';
 
 @Component({
     ...
