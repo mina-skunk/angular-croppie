@@ -7,10 +7,9 @@ Angular 2+ module for using [Croppie](https://foliotek.github.io/Croppie/).
 Based on @angular/cli project.
 
 ```bash
-npm install --save @angular/material angular-croppie hammerjs croppie
+npm install --save @angular/material angular-croppie-module hammerjs croppie
 npm install --save-dev @types/hammerjs @types/croppie
 ```
-*Note: angular-croppie not published yet.*
 
 Add `"../node_modules/croppie/croppie.css"` to `.angular-cli.json`'s `"styles": [...]`.
 
