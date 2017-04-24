@@ -9,8 +9,41 @@ import { CroppieDirective } from './croppie.directive';
  */
 @Component({
   selector: 'angular-croppie',
-  templateUrl: './croppie.component.html',
-  styleUrls: ['./croppie.component.scss']
+  template: `
+    <div>
+      <img #croppie="croppie" [croppieOptions]="internalCroppieOptions" />
+    </div>
+    <md-slider *ngIf="croppieOptions.showZoomer" [ngStyle]="{'width.px': croppieOptions.boundary.width}" step="0.0001" min="0.0000" max="1.5000" [value]="zoom" (input)="onZoom($event)"></md-slider>
+    <div *ngIf="croppieOptions.enableOrientation" class="rotate-container" [ngStyle]="{'width.px': croppieOptions.boundary.width, 'height.px': croppieOptions.boundary.height}">
+      <button md-mini-fab id="rotate-left" (click)="rotateLeft()"><md-icon>rotate_left</md-icon></button>
+      <button md-mini-fab id="rotate-right" (click)="rotateRight()"><md-icon>rotate_right</md-icon></button>
+    </div>
+  `,
+  styles: [`
+    :host {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+    }
+
+    .rotate-container {
+        position: absolute;
+    }
+
+    #rotate-left {
+        position: absolute;
+        bottom: 16px;
+        left: 16px;
+        z-index: 1;
+    }
+
+    #rotate-right {
+        position: absolute;
+        bottom: 16px;
+        right: 16px;
+        z-index: 1;
+    }
+  `]
 })
 export class CroppieComponent {
 
