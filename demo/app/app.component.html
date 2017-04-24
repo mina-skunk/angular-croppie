@@ -1,4 +1,9 @@
-<h1>
-  {{title}}
-</h1>
-<angular-croppie [croppieOptions]="croppieOptions"></angular-croppie>
+<h1>Directive</h1>
+<div>
+  <img #directive="croppie" [croppieOptions]="croppieOptions" />
+</div>
+
+<h1>Component</h1>
+<div>
+  <angular-croppie #component [croppieOptions]="croppieOptions"></angular-croppie>
+</div>

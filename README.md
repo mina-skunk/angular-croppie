@@ -14,7 +14,9 @@ npm install --save-dev @types/hammerjs @types/croppie
 
 Add `"../node_modules/croppie/croppie.css"` to `.angular-cli.json`'s `"styles": [...]`.
 
-## Directive (basic)
+## Directive
+
+Basic directive for creating Coppie instance on `<img>` tag.
 
 ```ts
 import { CroppieModule } from 'angular-croppie';
@@ -56,6 +58,46 @@ export class AppComponent implements AfterViewInit {
 }
 ```
 
-## Component (experimental)
+## Component
 
-TODO
+Component containing Coppie instance and material design rotation buttons and slider.
+
+```ts
+import { CroppieModule } from 'angular-croppie';
+
+@NgModule({
+    imports: [
+        CroppieModule
+    ]
+})
+export class AppModule { }
+```
+
+```html
+<angular-croppie #croppie [croppieOptions]="croppieOptions"></angular-croppie>
+```
+
+```ts
+import { CroppieOptions } from 'croppie';
+import { CroppieDirective } from 'angular-croppie';
+
+@Component({
+    ...
+})
+export class AppComponent implements AfterViewInit {
+
+    public croppieOptions: CroppieOptions = {
+        // https://foliotek.github.io/Croppie/#documentation Options
+        ...options
+    };
+
+    @ViewChild('croppie')
+    public croppieComponent: CroppieComponent;
+
+    public ngAfterViewInit() {
+        // https://foliotek.github.io/Croppie/#documentation Methods
+        this.croppieComponent.croppie...
+    }
+
+}
+```

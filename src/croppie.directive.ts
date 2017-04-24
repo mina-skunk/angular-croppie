@@ -2,6 +2,9 @@ import { Directive, AfterViewInit, OnDestroy, Input, ElementRef } from '@angular
 import Croppie from 'croppie';
 import { CroppieOptions } from 'croppie';
 
+/**
+ * Basic directive for creating Coppie instance on `<img>` tag.
+ */
 @Directive({
   selector: 'img[croppieOptions]',
   exportAs: 'croppie'

@@ -5,14 +5,14 @@ import { CroppieOptions } from 'croppie';
 import { CroppieDirective } from './croppie.directive';
 
 /**
- * @experimental
+ * Component containing Coppie instance and material design rotation buttons and slider.
  */
 @Component({
   selector: 'angular-croppie',
   templateUrl: './croppie.component.html',
   styleUrls: ['./croppie.component.scss']
 })
-export class CroppieComponent implements AfterViewInit {
+export class CroppieComponent {
 
   @Input()
   public croppieOptions: CroppieOptions;
@@ -27,22 +27,15 @@ export class CroppieComponent implements AfterViewInit {
   @ViewChild('croppie')
   public croppieDirective: CroppieDirective;
 
+  get croppie(): Croppie {
+    return this.croppieDirective.croppie;
+  }
+
   get zoom(): number {
     return !!this.croppieDirective.croppie ? (this.croppieDirective.croppie as any).get().zoom : 1;
   }
 
-  // set zoom(value: number) {
-  //   if (!!this.croppieDirective.croppie) {
-  //     this.croppieDirective.croppie.setZoom(value);
-  //   }
-  // }
-
   constructor() { }
-
-  public ngAfterViewInit() {
-    console.dir(this.croppieDirective);
-    this.croppieDirective.croppie.bind({ url: 'assets/angular.png' });
-  }
 
   public onZoom(change: MdSliderChange) {
     if (!!this.croppieDirective.croppie) {

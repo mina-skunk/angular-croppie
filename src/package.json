@@ -1,0 +1,12 @@
+{
+    "name": "angular-croppie",
+    "main": "bundles/angular-croppie.umd.js",
+    "module": "index.js",
+    "typings": "index.d.ts",
+    "peerDependencies": {
+        "@angular/core": "*",
+        "@angular/common": "*",
+        "@angular/material": "*",
+        "croppie": "*"
+    }
+}
