@@ -29,4 +29,8 @@ export class AppComponent implements AfterViewInit {
     this.croppieComponent.croppie.bind({ url: 'assets/angular.png' });
   }
 
+  public handleUpdate() {
+    console.log('hit');
+  }
+
 }

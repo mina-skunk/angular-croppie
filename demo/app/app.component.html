@@ -1,6 +1,6 @@
 <h1>Directive</h1>
 <div>
-  <img #directive="croppie" [croppieOptions]="croppieOptions" />
+  <img #directive="croppie" [croppieOptions]="croppieOptions" (update)="handleUpdate()" />
 </div>
 
 <h1>Component</h1>

@@ -3,10 +3,13 @@
     "main": "bundles/angular-croppie-module.umd.js",
     "module": "index.js",
     "typings": "index.d.ts",
+    "dependencies": {
+        "croppie": "*"
+    },
     "peerDependencies": {
         "@angular/core": "*",
         "@angular/common": "*",
-        "@angular/material": "*",
-        "croppie": "*"
+        "@angular/cdk": "*",
+        "@angular/material": "*"
     }
 }

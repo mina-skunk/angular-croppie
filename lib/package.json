@@ -2,6 +2,8 @@
   "main": "bundles/angular-croppie-module.umd.js",
   "version": "0.0.4",
   "description": "Angular 2+ module for using [Croppie](https://foliotek.github.io/Croppie/).",
+  "module": "index.js",
+  "typings": "index.d.ts",
   "keywords": [
     "angular",
     "croppie"
@@ -15,15 +17,15 @@
     "url": "git+https://github.com/gatimus/angular-croppie.git"
   },
   "name": "angular-croppie-module",
-  "module": "index.js",
-  "typings": "index.d.ts",
-  "peerDependencies": {
-    "@angular/common": "^4.0.0",
-    "@angular/core": "^4.0.0",
-    "@angular/material": "^2.0.0-beta.8",
+  "dependencies": {
     "croppie": "^2.4.1"
   },
+  "peerDependencies": {
+    "@angular/cdk": "^2.0.0-beta.8",
+    "@angular/common": "^4.0.0",
+    "@angular/core": "^4.0.0",
+    "@angular/material": "^2.0.0-beta.8"
+  },
   "_id": "angular-croppie-module@",
-  "devDependencies": {},
-  "dependencies": {}
+  "devDependencies": {}
 }

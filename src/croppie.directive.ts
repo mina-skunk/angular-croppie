@@ -1,4 +1,5 @@
-import { Directive, AfterViewInit, OnDestroy, Input, ElementRef } from '@angular/core';
+import { Directive, AfterViewInit, OnDestroy, Input, Output, ElementRef, EventEmitter } from '@angular/core';
+import { Observable } from 'rxjs/Rx';
 import Croppie from 'croppie';
 import { CroppieOptions } from 'croppie';
 
@@ -18,8 +19,12 @@ export class CroppieDirective implements AfterViewInit, OnDestroy {
   @Input()
   public croppieOptions: CroppieOptions;
 
+  @Output()
+  public update: Observable<Croppie>;
+
   constructor(elementRef: ElementRef) {
     this.element = elementRef.nativeElement;
+    this.update = Observable.never();
   }
 
   public ngAfterViewInit() {
@@ -27,6 +32,7 @@ export class CroppieDirective implements AfterViewInit, OnDestroy {
       this.element,
       this.croppieOptions
     );
+    this.update = Observable.fromEvent(this.element, 'update');
   }
 
   public ngOnDestroy() {
