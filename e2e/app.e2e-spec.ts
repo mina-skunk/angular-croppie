@@ -1,14 +1,14 @@
-import { AngularCroppiePage } from './app.po';
+import { AngularCroppieModulePage } from './app.po';
 
-describe('angular-croppie App', () => {
-  let page: AngularCroppiePage;
+describe('angular-croppie-module App', () => {
+  let page: AngularCroppieModulePage;
 
   beforeEach(() => {
-    page = new AngularCroppiePage();
+    page = new AngularCroppieModulePage();
   });
 
-  it('should display message saying app works', () => {
+  it('should display welcome message', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('app works!');
+    expect(page.getParagraphText()).toEqual('Welcome to app!!');
   });
 });
