@@ -54,7 +54,9 @@
     "typescript": "~2.3.3"
   },
   "description": "Angular 2+ module for using [Croppie](https://foliotek.github.io/Croppie/).",
-  "main": " ",
+  "main": "lib/bundles/angular-croppie-module.umd.js",
+  "module": "lib/index.js",
+  "typings": "lib/index.d.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/gatimus/angular-croppie.git"
