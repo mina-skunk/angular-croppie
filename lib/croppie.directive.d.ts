@@ -1,5 +1,4 @@
-import { AfterViewInit, OnDestroy, ElementRef } from '@angular/core';
-import { Observable } from 'rxjs/Rx';
+import { AfterViewInit, OnDestroy, ElementRef, EventEmitter } from '@angular/core';
 import Croppie from 'croppie';
 import { CroppieOptions } from 'croppie';
 /**
@@ -9,7 +8,7 @@ export declare class CroppieDirective implements AfterViewInit, OnDestroy {
     private element;
     croppie: Croppie;
     croppieOptions: CroppieOptions;
-    update: Observable<Croppie>;
+    update: EventEmitter<Croppie>;
     constructor(elementRef: ElementRef);
     ngAfterViewInit(): void;
     ngOnDestroy(): void;

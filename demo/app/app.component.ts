@@ -1,7 +1,7 @@
 import { Component, AfterViewInit, ViewChild } from '@angular/core';
 import { CroppieOptions } from 'croppie';
 import { CroppieDirective } from '../../src/croppie.directive';
-import { CroppieComponent } from '../../src/croppie.component';
+import { CroppieComponent } from './croppie.component';
 
 @Component({
   selector: 'app-root',
@@ -29,8 +29,8 @@ export class AppComponent implements AfterViewInit {
     this.croppieComponent.croppie.bind({ url: 'assets/angular.png' });
   }
 
-  public handleUpdate() {
-    console.log('hit');
+  public handleUpdate(data) {
+    console.dir(data);
   }
 
 }

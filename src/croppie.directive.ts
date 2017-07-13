@@ -20,19 +20,19 @@ export class CroppieDirective implements AfterViewInit, OnDestroy {
   public croppieOptions: CroppieOptions;
 
   @Output()
-  public update: Observable<Croppie>;
+  public update: EventEmitter<Croppie>;
 
   constructor(elementRef: ElementRef) {
     this.element = elementRef.nativeElement;
-    this.update = Observable.never();
+    this.update = new EventEmitter();
   }
 
   public ngAfterViewInit() {
+    (this.croppieOptions as any).update = (data) => this.update.emit(data);
     this.croppie = new Croppie(
       this.element,
       this.croppieOptions
     );
-    this.update = Observable.fromEvent(this.element, 'update');
   }
 
   public ngOnDestroy() {

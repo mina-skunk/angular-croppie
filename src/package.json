@@ -8,8 +8,6 @@
     },
     "peerDependencies": {
         "@angular/core": "*",
-        "@angular/common": "*",
-        "@angular/cdk": "*",
-        "@angular/material": "*"
+        "@angular/common": "*"
     }
 }

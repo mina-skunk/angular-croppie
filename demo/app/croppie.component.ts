@@ -2,7 +2,7 @@ import { Component, AfterViewInit, Input, ViewChild } from '@angular/core';
 import { MdSliderChange } from '@angular/material';
 import Croppie from 'croppie';
 import { CroppieOptions } from 'croppie';
-import { CroppieDirective } from './croppie.directive';
+import { CroppieDirective } from '../../src/croppie.directive';
 
 /**
  * Component containing Coppie instance and material design rotation buttons and slider.
@@ -51,7 +51,7 @@ export class CroppieComponent {
   public croppieOptions: CroppieOptions;
 
   get internalCroppieOptions(): CroppieOptions {
-    let ico: CroppieOptions = {};
+    const ico: CroppieOptions = {};
     Object.assign(ico, this.croppieOptions);
     ico.showZoomer = false;
     return ico;
@@ -64,6 +64,7 @@ export class CroppieComponent {
     return this.croppieDirective.croppie;
   }
 
+  // TODO use update @Output of directive mabey
   get zoom(): number {
     return !!this.croppieDirective.croppie ? (this.croppieDirective.croppie as any).get().zoom : 1;
   }
