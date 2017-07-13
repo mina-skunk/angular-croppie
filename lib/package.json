@@ -1,6 +1,6 @@
 {
   "main": "bundles/angular-croppie-module.umd.js",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Angular 2+ module for using [Croppie](https://foliotek.github.io/Croppie/).",
   "module": "index.js",
   "typings": "index.d.ts",
