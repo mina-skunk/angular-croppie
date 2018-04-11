@@ -36,7 +36,7 @@ app.component.html
 
 app.component.ts
 ```ts
-import { CroppieOptions } from 'croppie';
+import * as Croppie from 'croppie';
 import { CroppieDirective } from 'angular-croppie-module';
 
 @Component({
@@ -44,7 +44,7 @@ import { CroppieDirective } from 'angular-croppie-module';
 })
 export class AppComponent implements AfterViewInit {
 
-    public croppieOptions: CroppieOptions = {
+    public croppieOptions: Croppie.CroppieOptions = {
         // https://foliotek.github.io/Croppie/#documentation Options
         ...options
     };

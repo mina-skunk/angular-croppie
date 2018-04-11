@@ -1,0 +1,12 @@
+<div>
+  <img #croppie="croppie" [croppieOptions]="internalCroppieOptions" />
+</div>
+<mat-slider *ngIf="croppieOptions.showZoomer" [ngStyle]="{'width.px': croppieOptions.boundary.width}" step="0.0001" min="0.0000" max="1.5000" [value]="zoom" (input)="onZoom($event)"></mat-slider>
+<div *ngIf="croppieOptions.enableOrientation" class="rotate-container" [ngStyle]="{'width.px': croppieOptions.boundary.width, 'height.px': croppieOptions.boundary.height}">
+  <button mat-mini-fab id="rotate-left" (click)="rotateLeft()">
+    <mat-icon>rotate_left</mat-icon>
+  </button>
+  <button mat-mini-fab id="rotate-right" (click)="rotateRight()">
+    <mat-icon>rotate_right</mat-icon>
+  </button>
+</div>

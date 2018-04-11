@@ -1,0 +1,24 @@
+:host {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.rotate-container {
+  position: absolute;
+
+  #rotate-left {
+    position: absolute;
+    bottom: 16px;
+    left: 16px;
+    z-index: 1;
+  }
+
+  #rotate-right {
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+    z-index: 1;
+  }
+
+}
