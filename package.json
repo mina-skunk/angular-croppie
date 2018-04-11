@@ -1,6 +1,6 @@
 {
   "name": "angular-croppie",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
@@ -54,5 +54,19 @@
     "tslib": "^1.7.1",
     "tslint": "~5.9.1",
     "typescript": "~2.7.2"
-  }
+  },
+  "description": "Angular 2+ module for using [Croppie](https://foliotek.github.io/Croppie/).",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gatimus/angular-croppie.git"
+  },
+  "keywords": [
+    "angular",
+    "croppie"
+  ],
+  "author": "gatimus",
+  "bugs": {
+    "url": "https://github.com/gatimus/angular-croppie/issues"
+  },
+  "homepage": "https://github.com/gatimus/angular-croppie#readme"
 }
