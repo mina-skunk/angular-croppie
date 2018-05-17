@@ -1,7 +1,7 @@
 import { Component, AfterViewInit, Input, ViewChild } from '@angular/core';
 import { MatSliderChange } from '@angular/material/slider';
 import * as Croppie from 'croppie';
-import { CroppieDirective } from 'angular-croppie-module';
+import { CroppieDirective } from '../angular-croppie-module/src/lib/croppie.directive';
 
 /**
  * Component containing Coppie instance and material design rotation buttons and slider.
