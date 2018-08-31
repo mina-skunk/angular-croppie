@@ -1,3 +1,5 @@
+# no longer maintained 
+
 # angular-croppie-module
 
 Angular 2+ module for using [Croppie](https://foliotek.github.io/Croppie/).
