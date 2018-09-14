@@ -1,6 +1,6 @@
 import { Component, AfterViewInit, ViewChild } from '@angular/core';
 import * as Croppie from 'croppie';
-import { CroppieDirective } from 'angular-croppie-module';
+import { CroppieDirective } from '../angular-croppie-module/src/lib/croppie.directive';
 import { CroppieComponent } from './croppie.component';
 
 @Component({
